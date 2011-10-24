@@ -1,0 +1,6 @@
+忽略一些文件: 1 svn rm 删除所有你想忽略的文件  2 svn up  3 svn ci  4 svn propedit svn:ignore dir   打开dir目录的忽略配置  5 输入*.pyc等  设置忽略  6 每一个文件夹都要设置
+修改url地址: sudo svn switch --relocate oldurl newurl 
+放弃所有修改: svn revert -R * 
+比较版本之间的差异: svn diff -r v1:v2 filename 
+合并版本之间的差异: svn merge -r v1:v2 filename 
+删除svn里面的文件，但是保留本地副本   svn delete svn://ip/file 

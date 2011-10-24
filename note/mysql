@@ -1,0 +1,92 @@
+select version(), current_date;
+show databases 
+mysql -u root -p131400 
+show tables 
+create table tbname (name varcahr(20)) 
+描述表: describe tbname 
+load data local infile '/path/pet.txt' into table pet; 
+like: 多个用 % 一个用 _ 
+使用正则： where name regexp '^b' 
+临时变量: select @min_price:=min(price),@max_price:=max(price) from shop;  select * from shop where price=@min_price or price=@max_price; 
+刚才insert的id: select @last := last_insert_id(); 
+id自动增加: id mediumint not null auto_increment 
+替换replace: replace [low_priority | delayed] [into] tbname [(c1,c2)] values (),(),() 
+调用存储过程: call procedure_name(); 
+repeat: repeat set @x = @x + 1; until @x > p1 end repeat; 
+随机排序 order by rand() 
+显示服务器信息 show status 
+查看权限 show grants 
+查看错误与警告 show errors 
+查看错误与警告 show errors; show warnings; 重新连接时，错误信息被清空
+select * from tb limit 3,5 从第3行开始取5行
+in 一般比 or 快 
+把% _ 放在 like 的前面，效率最慢 
+连接字符串: concat(str,str) as all 
+删除字符串左右两边的空格: trim(str) rtrim(str) ltrim(str) 
+转为大写、小写: upper(str) lower(str)
+找到子串: locate()
+顺序: select from where group by having order by limit
+自连接,找出生产了dtntr的供应商还生产了哪些产品: select p1.prod_id, p1.prod_name from products as p1, products as p2 where p1.vend_id = p2.vend_id and p2.prod_id = 'dtntr'
+合并结果集: select**** union select**** , 列要相同，但是出现的次序可以不同，先union，再order by，order只出现一次，并且在最后
+降低语句优先级如: insert low_priority into
+一次插入多个值: insert into tbname(c1,c2)values(v1,v2),(v3,v4),(v5,v6);
+忽略更新错误: update ignore tbname****  否则当一个行出现错误时，整个语句回滚
+设置主键: create table tbname(id int not null auto_increment, primary key (id))  
+指定引擎: create table tbname(id) engine=innodb 
+引擎: innodb 支持事务，不支持全文本搜索。 myisam 支持全文本搜索，不支持事务。 memory类似myisam,数据放在内存里。 
+外键强制引用完整，但是不能跨引擎 
+增加列，删除列: alter table tbname add phonenum char(20); alter table tbname drop column phonenum 
+增加外键: alter table orderitems add constraint fk foreign key (prod_id) references products (prod_id) 
+创建视图: create view viername as select**** 
+删除存储过程前先判断是否存在: drop procedure if exists proname
+select avg(price) into pa from products 
+显示索引: show index from tbname 
+给存储过程添加注释: create procedure pname()comment '我是注释' begin *** end 
+显示存储过程: show procedure status;  show create procedure pname 
+使用事务,回滚: start transaction; do something; rollback; 
+设置保留点: savepoint d1; rollback to d1; 
+显示支持的字符集、校对排序: show character set; show collation;
+对表使用字符集与校对排序: create table tbname() default character set utf8 collate utf8_general_ci
+对列使用字符集与校对排序: create table tbname(column varchar(10) character set utf8 collate utf8_general_ci)
+在select中指定校对排序: select * from pet order by name collate utf8_general_ci
+显示变量: show variables; 
+显示,kill线程: show processlist; kill id; 
+分析一条语句如何运行: explain ****
+导入数据时应该先关闭自动提交和索引，导入后再重建
+如果一个where字句运行时间过长，那么就应该对where的列建索引
+select中使用or时如果效率低，可以用union代替or
+like很慢，可以用fulltext代替
+索引提高了select的效率，但是降低了insert,update,delete的效率，批量插入时应该先删除索引，再添加
+执行文件脚本: mysql -u root -p123456 < filename;   echo show tables | mysql | grep ;   mysql> source filename;  source本身可以写在脚本里面; 
+查看错误信息: perror errornum 
+自动维护插入与更新时间: create table tbname(created timestamp not null default current_timestamp, updated timestamp not null on update current_timestamp )
+修改列: alter table tbname modify c1 tinyint not null, change c2 c3 char(20);  modify修改类型, change修改列名与类型
+unixtime 转为 timestamp: from_unixtime(875996580,format)
+获得unixtime: select unix_timestamp();
+显示表信息: show table status like 'tbname' 
+复制表结构到新表: create table newtb like oldtb; 
+简单测试语句运行的时间: select benchmark(100000,select****); 
+磁盘碎片整理: optimize table tbname 
+添加索引: alter table table_name add index index_name (column) 
+授权远程访问: grant all privileges on *.* to 'root'@'%' identified by '131400' with grant option; 
+显示表定义: show create table tbname; 
+添加唯一索引: alter table tbname add unique index indexname (...) 
+替换插入: replace into tbname (...) 
+显示查询进程 show full processlist 
+乱码: set names utf8; 
+显示所有列的详细信息: show full fields from tableName 
+统计各列空值数：select sum(isnull(col)),sum(isnull(col1) and isnull(col2)) from table 
+随机顺序: order by rand() 
+复制表数据:insert into spider_item_7 select * from spider_item_6 
+导出数据:mysqldump -uroot -p131400 --default-character-set=utf8 db_name >/home/sdjl/db_name.txt 
+今天的数据当天的数据: created like concat(curdate(),'%') 
+显示正在查询的语句状态: show processlist 
+求出created距离现在小于24小时的数据 where hour(TIMEDIFF(NOW(),created)) < 24 
+修改表名称 ALTER  TABLE table_name RENAME TO new_table_name 
+修改用户权限: grant all privileges on *.* to root@'%' identified by '131400';  flush privileges;
+导出数据 mysqldump -uroot -p131400 database_name table_name > file.sql 
+查询不使用缓存: SELECT SQL_NO_CACHE ... 
+仅导出表定义 mysqldump  --no-data 
+导入csv文件的数据： load data LOCAL infile 'file.csv' into table temp(c1,c2); 
+创建用户以及权限(4步):   create user shujishu identified by 'sjsdev'; grant all privileges on shujishu.* to shujishu@'%' identified by 'sjsdev'; grant all privileges on shujishu.* to shujishu@'localhost' identified by 'sjsdev'; flush privileges; 
+ip转为to int: inet_aton(ipstr) 

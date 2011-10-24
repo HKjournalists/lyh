@@ -1,0 +1,71 @@
+de = dw不删除空格
+c = d+a
+cl=删除字符并准备添加
+cc=删除行并准备添加
+dl=x=删除字符
+D＝d$
+C=c$
+s=cl
+S=cc
+r=替换字符
+.=重复命令(仅重复修改文本的命令,但是不包括undo redo : )
+n=重复查找命令
+df[x]=删除到[x]
+;=再次查找
+#=找到下一个光标所在单词
+*=找到上一个光标所在单词
+''=跳到刚才停留的位置
+替换少数单词:1 用／找到要换掉的单词(或者在要替换的单词上按*)   2 用ce删除后输入新单词   3用n查找下一个需要替换的地方   4 用.替换
+替换许多单词:1 :%s/\<four\>/4/gc  2 % 替换所有行  3 \< 匹配单词头  4 \> 匹配单词尾  5g 替换行的所有点  6 c 替换前要求确认
+xp 交换字符 
+跳到35行  :35 
+I=在最前面添加 
+大小写替换： :%s/[a-z]/\U&/g   :%s/[A-Z]/\L&/g 
+批量修改: 1 grep "searchword" -rl ./* > temp  把找到的文件保存在temp里面  2  vim temp 删除不应该修改的文件，比如.svn .pyc   3 cat temp | xargs vim  一个一个修改，注意要有sudo权限，改完一个用:wnext!跳到下一个文件
+'" 跳转到上一次离开时的位置，'. 跳转到上一次修改的位置, '' 跳转到跳过来的位置
+:edit otherfile  :args otherfiles 编辑其它文件
+:mark x  :ma x  mx  标记这里为x， 'x 跳转  大写的是全局的，小写的是单个文件
+ctrl+i 和 ctrl+o 配合使用，在不同的文件mark之间跳转编辑
+:delmarks abcd 删除mark 
+'<  '>  跳转到上一次用v选中的区域的开头或结尾 
+gi 跳转到上一次插入的地方，并插入 
+( ) 跳转到断开头或断结尾 
+[[  ]] 跳到上一段、下一段 
+das  删除当前段
+"f  使用寄存器f
+ctrl+z 挂起vim  在shell中输入fg可以回来
+qq 启动记录器(然后执行一些操作)  q 关闭记录器   @q   执行记录   10@q  执行十变
+:split  :split otherfile 开启多窗口  ctrl+ww在不同窗口之间跳转. :vspilt 垂直分割
+对所有的窗口执行相同命令 :wall :qall 等，注意不能undo
+在shell中输入 vimdiff a b 可以比较a和b
+:tabedit otherfile 可以用tab方式编辑另一个文件  gt 在tab之间跳转.   可以和:edit配合使用
+缩小,放大: ctrl+-  ctrl+shift++ 
+用tab的方式打开多个文件 vim -p file1 file2 
+打开新标签:ctrl+shift+t 
+超强制保存:  :w !sudo tee % 
+可以复制到系统剪贴板: "+yy  如果不能复制请sudo aptitude install vim-gnome vim-gui-common vim-full 
+变成小写: v模式选种,按下u 
+跳转到光标下单词的生命处 gd 
+在不同文件中跳换mark标记  m[A-Z]    '[A-Z] 
+删除一个段落 dap 
+v模式下选择一个块 ab
+v模式下选择一个段落 ap
+v模式下选择''之间的内容 i'
+v模式下选择html中的一个tag  at
+输入特殊字符esc  i模式下按ctrl+v后按esc
+把一个文本作为指令用于打开文档  vim file -s cmdfile
+还原最后修改的那一行  U
+查看光标下单词的帮助 K
+显示当前文件名称: ctrl+g 
+在命令行里面使用粘贴:  在命令行里按下ctrl+r,然后选择寄存器 
+在命令行中查看备选提示: ctrl+d 
+在命令行中插入所有备选提示: ctrl+a 
+命令行下输入光标下文件名可以用<cfile>代替 
+编辑另一个文件 :e file 
+在两个文件中替换 ctrl+shift+6 
+自动查找文件并打开: vim "+find stdio.h" 
+加密文件 vim -x file 
+打字时自动替换  :iabbrev lyh liuyonghui  或用imap
+输入rumtime变量 echo  
+折叠一个段落  zfap 
+打开光标下文件: gf 

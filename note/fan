@@ -1,0 +1,13 @@
+登录shaqiang: ssh sdjl@fandongxi.com
+登录数据库: fandongxi.com:8080 username:root password:siying0612
+爬虫路径: /var/fanpython/spider/
+从shaqiang发布alpha: sudo svn export file:///var/lib/svn/liujianming/trunk /var/liujianming_alpha --force
+访问alpha: alpha.fandongxi.com
+svn地址: http://www.fanqieshu.com:8081/liujianming/trunk
+svn checkout: svn checkout http://www.fanqieshu.com:8081/liujianming/trunk
+传东西到服务器: scp ~/XXX sdjl@fandongxi.com:~/XXX               [包含文件夹用-r]
+住的地址: 朝阳区定福庄北街东领鉴筑5号楼5单元1203   邮编100024
+登录服务器 ssh sdjl@fandongxi.com 
+google adwords: huangxiuyuan hxy4226775 
+傻强ip:220.194.54.11 
+淘宝客用户名和密码:cpc@fandongxi.com  lizi1818gogogo 

@@ -1,0 +1,4 @@
+删除忽略文件 git clean -f -x 
+查看修改记录 git reflog 
+整理objects git gc 
+删除无用的东西 git prune 

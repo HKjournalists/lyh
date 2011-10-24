@@ -1,0 +1,1 @@
+windows绑定hosts： 1 打开c:/Windows/system32/drivers/etc/hosts   2 把219.239.94.68 blog.shujishu.com复制到最下面一行  3 访问blog.shujishu.com查看我的blog 

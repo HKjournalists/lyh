@@ -1,0 +1,3 @@
+启动服务器 sudo /opt/sphinx/bin/searchd -c /opt/sphinx/etc/song.conf  
+停止运行 sudo /opt/sphinx/bin/searchd -c /opt/sphinx/etc/song.conf --stop 
+重新建立索引  sudo /opt/sphinx/bin/indexer -c /opt/sphinx/etc/song.conf --all 

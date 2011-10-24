@@ -1,0 +1,94 @@
+打印object的函数信息，这里是打印re的函数信息: print '\n\n\n'.join(["%s:\n%s" % (getattr(re,m).__name__ , getattr(re,m).__doc__) for m in dir(re) if callable(getattr(re,m))])
+编译：import compiler;    compiler.compileFile('filename')
+a if b else c  如果b的话就是a，否则是c 
+list[a:b:c] a是起始位置 b是结束位置 c是步长
+删除列表中的某一个: del L[i]   del L[i:j]   L.remove(i)   L[i:j]=[]
+dict.fromkeys(['a','b'],0) 
+str='[1,2,3]'; L=eval(str); L==[1,2,3] 
+保存数据在文件中 用pickle 
+如果L=[]; L.append(L); 那么L的最后一个元素是L自己，出现无限循环 
+执行字符串:  s='print abc'; exec s; 
+使用with: from __future__ import with_statement; with open('data') as file: ... 
+一种赋值: L=[a,b]=[1,2] 
+赋值 zero,one,two = range(3) 
+L=L+[1,2];  L+=[1,2];  前面L会指向新的地址，后者改变L指向的数据 
+使用 _x 的方式命名，不会被import *导入 
+L.append(1) sort reverse等会返回None 
+可以这样 if a<b<c: 
+取消print的换行符:  print 1,2,   在最后加一个点 
+print到文件: print >> myfile, 1,2,3 
+重定向输出到文件: sys.stdout = open('filename'); print 1,2,3;  sys.stderr = ...
+while : else:   当while失败后else会执行，break可以全部跳出 
+for : else:   当for执行完后else会执行，break可以全部跳出 
+处理文件的每一行 for line in open('filename'): 
+用map函数把文件的每一行转为大写: map(str.upper, open('filename')) 
+sorted(L)返回排序后的L，L.sort()是原地排序 
+sum(L)返回L的sum 
+any(L); all(L);  任何一个为真any返回真，所有为真all返回真 
+'&&'.join(strList)  用&&把一些str连接起来 
+zip函数:  for x,y in zip(L1,L2):  zip会依次取出L1和L2的各个元素得到一些tuple，个数等于最短的L的长度
+map(None,L1,L2) 会依次取取出L1和L2的各个元素得到一些tuple，个数等于最长的L的长度，缺少的地方用None填充
+用dict和zip创建dict:  dict(zip(keys, values))
+for (offset,item) in enumerate(L):  item是L的迭代值, offset是item的偏移值
+[x+y for x in 'abc' for y in 'abc']  返回一个9个元素的列表
+def abc(x):  x=[]不会改变调用者传递的参数，但是x[0]=1会 
+global是模块的全局变量 
+def 是一个语句，出现在哪里都可以 
+依赖类型的行为叫做多态 
+L[:] 是L的一个拷贝 
+传递参数:  def f(*args): print args  args是一个tuple，调用时可以传递任意个参数。  def f(**args): print args   args是一个dict，调用如f(a=1,b=2)  两种方法可以同时使用
+传递参数:  func(*args)会把args分解为tuple，func(**args)会分解为dict
+call function: def func(x,y,z): 后   可以 apply(func,(2,3,4))来调用 
+map(pow,[1,2],[3,4])执行了 pow(1,3);pow(2,4);
+filter((lambda x:x%2==0),range(x,y)) 返回x到y之间的偶数
+reduce((lambda x,y:x+y),range(n)) 返回0到n-1之间的和
+列表解析比map快，map比for快两倍
+列表解析和map能出现在for不能出现的地方，比如lambda中、dict中
+获得一个迭代器: (x ** 2 for x in range(4));   sum(x ** 2 for x in range(4));  map(math.sqrt, (x ** 2 for x in range(4)))  
+生成器: def gensquares(n): for i in range(n):  yield i**2    节约了内存 
+就算有全局变量x,函数内只要出现对x的赋值，则python认为x是局部的(除非使用global),而不管赋值语句出现在哪里,如果赋值语句前面有对x的读取操作，则会发生异常. 
+函数中的参数如果使用了可变的默认值(None,string,int等是不可变的)，那么这个参数在没有获得外参的情况下是这个函数的一个属性值，也就是说对于这个函数来说它是全局的. 
+没有return的函数返回了None 
+import form是赋值语句，import将整个模块对象赋值给一个变量，变量名与模块名相同。form将一个或多个变量赋值给本地中的同名对象。form samll import x,y; x=1不会改变small中的x，y[0]＝1会改变small中的y。import samll; small.x=1会改变small中的x 
+用import赋值的变量，在reload函数运行后，变量指向新的模块。用from赋值的变量，reload函数运行后，变量值不变。 
+如果某个dir下有一个__init__.py文件，那么第一次导入dir下的某个文件时，__init__.py会被执行 ,__init__.py中的变量能够在被导入的模块里调用.__init__.py文件可以把一个dir变成一个模块，比如可以 import dir
+_x命名的不会被from * 导出，如果使用了__all__ = ['var1','var2']  ,那么 from * 只会导出__all__中的变量
+from . import string 从当前目录导入， from .. import string  从上一级目录导入。
+动态导入模块: exec "import modname";   __import__("modname");
+assert <test>, <data>; 测试test，如果为false，则抛出data，可以用python -O 不运行assert
+陷阱:  [[]]*n  n个[]其实指向了同一个内存. 
+unixtime: int(time.mktime(time.localtime())) 
+键盘ctrl+c中断异常: except KeyboardInterrupt 
+try else else中的语句只在没有异常发生时才执行 
+异常信息: sys.exc_info()[0] 
+用正则表达式来split  re.compile('\W*').split(text) 
+生成字典的方法:  dict([(row[0],0) for row in rows]) 
+画图:  install python-matplotlib    from pylab import *   t=arange(0,100,0.1)   plot(t,sin(t))     show() 
+打乱顺序,随机出现: random.shuffle(tasks)
+是否为中文字符: 0x4e00<=ord(u'你')<0x9fa6 
+python3使用httplib2出错： 先apt-get install libssl-dev  然后再编译python3 安装 
+脚本文件所在路径:filePath = os.path.split(os.path.realpath(__file__))[0]
+对url解码: from urllib import unquote     url=unquote(url)   非编码过的字符应该不会收到影响 
+获得所有文件列表: os.listdir(os.getcwd()) 
+调用基类函数: class A:def a(self):           class B(A):def a(self): A.a(self) 
+reverse str: s=s[::-1] 
+utf-8转化为unicode: unicode(string,'utf-8','ignore') 
+线程安全: import threading  _lock=threading.Lock()  _lock.acquire()   _lock.release() 
+获得类名: a.__class_.__name__ 
+中文对齐: cnStr.ljust(20+len(cnStr)/3) 
+unicode转utf-8: uniStr.encode('utf-8') 
+转为二进制字符串: bin(100) 
+禁止httplib2重定向: httplib2.Http().follow_redirects = False 
+运行shell脚本: os.system(cmd) 
+找出所有中文字符 re.findall('[\x80-\xff]','e03051a大白/深兰') 
+在终端显示\t\n等 print repr() 
+安装greaman:  sudo apt-get install python-setuptools python-dev build-essential             sudo easy_install pip            sudo pip install gearman 
+查看全局变量: globals() 
+获得一行输入  raw_input()
+读取mp3文件的id3属性信息: from ID3 import *       ID3('filepath')['TITLE'] 
+gb2312编码转为utf-8 s.decode('gb2312','ignore').encode('utf-8') 
+当前用户名: import getpass     getpass.getuser() 
+No module named setuptools错误   wget http://peak.telecommunity.com/dist/ez_setup.py    sudo python ez_setup.py 
+读取mp3文件的bitrate与track_time运行时间:   sudo aptitude install python-pymad     import mad    mf = mad.MadFile(foo.mp3)     mf.total_time()   mf.bitrate() 
+获得当前时间戳: time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())) 
+json data: import json    json.dumps(data) 

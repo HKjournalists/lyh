@@ -1,0 +1,10 @@
+安装pymysql: sudo aptitude install python-mysqldb python-mysqldb-dbg 
+导入模块 import _mysql 
+连接数据库: db=_mysql.connect(user='root', passwd='131400' db='test') 
+查询: db.query(sqlStr); r = db.store_result(); r.fetch_row(); r==(('1','2'),);  返回n行 r.fetch_row(maxrows=n);  返回字典 r.fetch_row(how=1) 其中key是column名,how=2时key是tableName.columnName;
+自动转换结果类型: from MySQLdb.constants import FIELD_TYPE;   my_conv = { FIELD_TYPE.LONG: int };   db=_mysql.connect(conv=my_conv...)
+解决乱码: 1 Python文件设置编码 utf-8 （文件前面加上 #encoding=utf-8)     2 MySQL数据库charset=utf-8    3 Python连接MySQL是加上参数 charset=utf8     4 设置Python的默认编码为 utf-8 (sys.setdefaultencoding(utf-8)  5  在mysql中显示数据时调用 set names utf8;
+mysqldb调用存储过程:  cursor.callproc('proNmae',item)  item是一个tuple , item的每个值都可以是字符串，mysqldb会自动转换，并且不用考虑插入的数据中有'与"的情况
+sql='insert into cdinfo values(%s,%s,%s,%s,%s)'    param=(title,singer,imgurl,url,alpha)         n=cursor.execute(sql,param)  
+添加建立链接的参数: unix_socket='/var/run/mysqld/mysqld.sock 
+活得插入的数据的id   cursor.lastrowid 

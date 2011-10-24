@@ -1,0 +1,17 @@
+改变窗口大小：alt+f10 alt+f9 
+把当前窗口移动到其它工作区: ctrl+alt+shift+左右 
+切换tab: alt+数字 
+显示所有工作区: super+e 
+鼠标右键: shift+f10 
+重启回话: ctrl+alt+backspace 
+显示隐藏文件: ctrl+h 
+运行: alt+f2 
+打开主菜单: alt+f1 
+截图 截取窗口:alt+screen 
+高亮显示: super+n  super+m 
+切换标签: ctrl+pageup  ctrl+pagedown 
+显示当先工作区的所有窗口: super+w 
+显示所有窗口: super+a 
+alt+tab的替代品: super+tab 
+运行终端: ctrl+alt+t 
+sudo apt-get install poppler-data 
