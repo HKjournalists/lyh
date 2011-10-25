@@ -10,7 +10,7 @@ xrandr --output LVDS --mode 640x480 --rotate normal --pos 0x0 --output VGA --mod
 自动运行调度: 1 vim /etc/crontab  2 sudo /etc/init.d/cron restart 
 install bz2 : 1 tar xvjf file.bz2  2 cd file  3 ./configure  4  make  5 make install 
 编码转换:  iconv -f gb2312 -t utf-8 index.css index.css > temp  
-删除所有svn文件夹:  sudo rm -rf 'find -type d -name .svn'
+删除所有svn文件夹:  find -type d -name .svn | xargs sudo rm -r
 统计单词个数: grep -o word | wc -l 
 不用输入密码: vim /etc/sudoers 
 修改文件权限为777: sudo chmod -R 777 dir 
