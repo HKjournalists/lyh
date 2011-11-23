@@ -2,3 +2,5 @@
 查看修改记录 git reflog 
 整理objects git gc 
 删除无用的东西 git prune 
+把本地tags推送到服务器 push --tags 
+删除远程分支  git push origin :branch 

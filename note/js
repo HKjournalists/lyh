@@ -1,0 +1,6 @@
+获得浏览器宽度或高度 document.documentElement.clientWidth (Height) 
+字符串变小写 lower :  s.toLowerCase() 
+s.split(separator, limit) 
+用Javascript获取页面元素的位置 http://www.ruanyifeng.com/blog/2009/09/find_element_s_position_using_javascript.html 
+向数组array中添加append数据:  var a=[]; a.push(obj); 
+字符串转整数  str parser to int :   parseInt() 
