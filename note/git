@@ -4,3 +4,5 @@
 删除无用的东西 git prune 
 把本地tags推送到服务器 push --tags 
 删除远程分支  git push origin :branch 
+移动分支指针到某个commit(move branch commit): git branch -f master commit 
+对某个分支打tag:  git tag -f tag_name branch 
