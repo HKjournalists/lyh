@@ -97,6 +97,8 @@ let html_no_rendering=1
 :map <C-p> gf
 :map <C-h> gT
 :map <C-l> gt
+:map <C-a> "+p
+:map <C-s> "+y
 
 "pydiction 1.2 python auto complete
 runtime macros/matchit.vim
