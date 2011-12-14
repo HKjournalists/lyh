@@ -1,7 +1,9 @@
 #!/usr/bin/env python
-import sys
+import sys, getopt
 
 queue = []
+level = dict(getopt.getopt(sys.argv[1:], "l:y:h:")[0]).get('-l', None)
+
 
 for l in sys.stdin.readlines():
     l = l.replace('\t',' ')
@@ -20,4 +22,7 @@ for l in sys.stdin.readlines():
                 queue.pop()
             queue.append((space_len, l))
 
-    print ';'.join([q[1] for q in queue])
+    if level is None:
+        print ';'.join([q[1] for q in queue])
+    else:
+        print ';'.join([q[1] for q in queue][-int(level):])
