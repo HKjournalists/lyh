@@ -2,7 +2,7 @@
 
 import sys
 
-d = dict([l.split('\t') for l in open('Mandarin.dat').readlines()])
+d = dict([l.split('\t') for l in open('pinyin.dat').readlines()])
 
 def _chartopinyin(chars):
     result = []
