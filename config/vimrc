@@ -95,6 +95,7 @@ let html_no_rendering=1
 :map <C-t> :tabedit ./
 :map <C-e> \be
 :map <C-p> gf
+:map <C-c> :wq
 :map <C-h> gT
 :map <C-l> gt
 :map <C-a> "+p
@@ -124,10 +125,10 @@ imap c= class=""i
 :map \h /htmlfile:wgf
 :map \m /modelfile:wgf
 :map <F2> :wa
-:map <F7> :wa:tabnew:r !/opt/zark/web/cgi/testing/test_all.py:q!
-:map <F8> :wa:tabnew:r !/opt/zark/web/cgi/testing/test_all.py zml:q!
-:map <F9> :wa:! /opt/zark/web/cgi/testing/test_one.py %
-:map <F10> :wa?^\s*def :nohlew"tyw'':! /opt/zark/web/cgi/testing/test_method.py % t
+:map <F7> :wa:tabnew:r !/opt/aoaola/web/cgi/testing/test_all.py model:q!
+" :map <F8> :wa:tabnew:r !/opt/zark/web/cgi/testing/test_all.py zml:q!
+:map <F9> :wa:! /opt/aoaola/web/cgi/testing/test_one.py %
+:map <F10> :wa?^\s*def :nohlew"tyw'':! /opt/aoaola/web/cgi/testing/test_method.py % t
 
 :imap <tab> <c-x><c-o>
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
