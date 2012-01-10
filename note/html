@@ -1,0 +1,1 @@
+允许form上传文件  给form添加属性 enctype="multipart/form-data"  

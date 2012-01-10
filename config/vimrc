@@ -112,9 +112,11 @@ let g:pydiction_location = '~/.vim/tools/pydiction/complete-dict'
 " autocmd FileType html imap ......
 imap <d <div></div>O
 imap <u <ul></ul>O<li></li>
-imap <f <frame ></frame>k$4F"a
+" imap <f <frame ></frame>k$4F"a
+imap <f <form action="" method="POST" enctype="multipart/form-data" ></form>O
 imap <a <a href="" ></a>F<i
-imap <i <item ztype="" />F"i
+" imap <i <item ztype="" />F"i
+imap <i <input type="text" name="" value="" />F"i
 imap <t <textarea cols=80 rows=10 name="" ></textarea>2F"a
 imap <p <p></p>F>a
 imap c= class=""i
@@ -124,7 +126,7 @@ imap c= class=""i
 :map \p /pythonfile:wgf
 :map \h /htmlfile:wgf
 :map \m /modelfile:wgf
-:map <F2> :wa
+:map <F1> :wa
 :map <F7> :wa:tabnew:r !/opt/aoaola/web/cgi/testing/test_all.py model:q!
 " :map <F8> :wa:tabnew:r !/opt/zark/web/cgi/testing/test_all.py zml:q!
 :map <F9> :wa:! /opt/aoaola/web/cgi/testing/test_one.py %

@@ -1,1 +1,2 @@
 删除css .removeClass('classname') 
+checkbox 打勾和去勾 attr('checked','checked')  removeAttr('checked') 
