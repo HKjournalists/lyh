@@ -1,3 +1,5 @@
 启动服务器 sudo /opt/sphinx/bin/searchd -c /opt/sphinx/etc/song.conf  
 停止运行 sudo /opt/sphinx/bin/searchd -c /opt/sphinx/etc/song.conf --stop 
 重新建立索引  sudo /opt/sphinx/bin/indexer -c /opt/sphinx/etc/song.conf --all 
+cannot find MySQL include files 从源代码安装的环境 sudo aptitude install libmysql++-dev libmysqlclient15-dev checkinstall 
+搜索数字id等  select  CONCAT(id)... 

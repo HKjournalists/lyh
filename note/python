@@ -92,3 +92,9 @@ No module named setuptools错误   wget http://peak.telecommunity.com/dist/ez_se
 读取mp3文件的bitrate与track_time运行时间:   sudo aptitude install python-pymad     import mad    mf = mad.MadFile(foo.mp3)     mf.total_time()   mf.bitrate() 
 获得当前时间戳: time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())) 
 json data: import json    json.dumps(data) 
+获得命令行参数  import getopt  http://hi.baidu.com/javalang/blog/item/1f72fe034fb9de743812bb7e.html 
+打印彩色文字  红色: print  '%s[31;2m%s%s[0m' % (chr(27), s, chr(27))   http://hi.baidu.com/yong_liu2010/blog/item/c0d4148a6b8e6aa40e244477.html
+把字符串转为时间 time.strptime('2010-07-02 14:32','%Y-%m-%d %H:%M')  http://hi.baidu.com/qinghua9/blog/item/cf9fafccd71e661900e92870.html 
+截断中文字符, 取中文字符的子串 str.decode('utf-8')[0:100].encode('utf-8') 
+只显示小数点后一位 '%.1f' % 3.333 
+对url编码: from urllib import quote     url=quote(url)  

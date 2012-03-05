@@ -117,9 +117,16 @@ imap <f <form action="" method="POST" enctype="multipart/form-data" ></form>O
 imap <a <a href="" ></a>F<i
 " imap <i <item ztype="" />F"i
 imap <i <input type="text" name="" value="" />F"i
+imap <img <img src="" alt="" title="" />5F"i
 imap <t <textarea cols=80 rows=10 name="" ></textarea>2F"a
 imap <p <p></p>F>a
 imap c= class=""i
+
+imap jokem joke_model = site_helper.getModel('Joke')
+imap reportm report_model = site_helper.getModel('Report')
+imap userm user_model = site_helper.getModel('User')
+imap makeupm makeup_model = site_helper.getModel('Makeup')
+imap commentm comment_model = site_helper.getModel('Comment')
 
 :map \c lb"tyw/cssfile:wgf/t
 :map \j /jsfile:wgf
@@ -132,5 +139,6 @@ imap c= class=""i
 :map <F9> :wa:! /opt/aoaola/web/cgi/testing/test_one.py %
 :map <F10> :wa?^\s*def :nohlew"tyw'':! /opt/aoaola/web/cgi/testing/test_method.py % t
 
-:imap <tab> <c-x><c-o>
+:imap <S-tab> <c-x><c-o>
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+    

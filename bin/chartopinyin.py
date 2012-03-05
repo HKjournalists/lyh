@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
-import sys
+import sys, os
+filePath = os.path.split(os.path.realpath(__file__))[0]
+d = dict([l.split('\t') for l in open(filePath + '/pinyin.dat').readlines()])
 
-d = dict([l.split('\t') for l in open('pinyin.dat').readlines()])
-
-def _chartopinyin(chars):
+def charToPinyin(chars):
     result = []
     for char in unicode(chars, 'utf-8', 'ignore'):
         key = "%X" % ord(char)
@@ -15,6 +15,6 @@ def _chartopinyin(chars):
     return ''.join(result)
 
 
-if __name__=='__name__':
+if __name__=='__main__':
     for line in sys.stdin.readlines():
-        print _chartopinyin(line).strip()
+        print charToPinyin(line).strip()
