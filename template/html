@@ -1,0 +1,44 @@
+box3col
+<div class="box3col">
+   <div class="box3col_l"></div>
+   <div class="box3col_m"></div>
+   <div class="box3col_r"></div>
+</div>
+%%
+btn01
+<div class="btn01">
+    <input type="submit" value="修改" />
+    <span></span>
+</div>
+%%
+accordion01
+<div class="s5_accordion_01" >
+    <ul>
+        <li><a>category 1</a></li>
+        <li><a>category 2</a></li>
+        <li><a>category 3</a>
+            <div>
+                <ul>
+                    <li><a>small 1</a></li>
+                    <li><a>small 2</a></li>
+                    <li><a>small 3</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div><div class="clearfix"></div>
+%%
+fleaa page fleaname
+<a fleaflea="{$page}.{$fleaname}" href="$fleas.{$fleaname}.href" target="$fleas.{$fleaname}.target" title="$fleas.{$fleaname}.hovertitle" >$fleas.{$fleaname}.title</a>
+%%
+fleap page fleaname
+<p fleaflea="{$page}.{$fleaname}" flea_item_hidden="href|target" title="$fleas.{$fleaname}.hovertitle" >$fleas.{$fleaname}.title</p>
+%%
+fleapre page fleaname
+<pre fleaflea="{$page}.{$fleaname}" flea_item_hidden="href|target" title="$fleas.{$fleaname}.hovertitle" >$fleas.{$fleaname}.title</pre>
+%%
+fleaimg page fleaname
+<a href="$fleas.{$fleaname}.href" target="$fleas.{$fleaname}.target" ><img src="$fleas.{$fleaname}.uri" fleaflea="{$page}.{$fleaname}" title="$fleas.{$fleaname}.hovertitle" /></a>
+%%
+backbutton
+<input class="btn_backstep" type="button"  value="后退" onclick="history.go(-1);" />

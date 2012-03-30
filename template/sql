@@ -1,0 +1,25 @@
+textlink table_name
+CREATE TABLE {$table_name} (
+    {$table_name}id int unsigned  not null auto_increment,
+    href            varchar(500)  not null default '',
+    target          ENUM('_blank','_self')   not null default '_self',
+    title           varchar(100)  charset utf8 not null default '',
+    paragraph       varchar(4000) charset utf8 not null default '',
+    primary key ({$table_name}id)
+)ENGINE=InnoDB;
+%%
+video name
+CREATE TABLE {$name} (
+    {$name}id           int unsigned not null auto_increment,
+    Categoryid          int unsigned not null default 0,
+    href                varchar(300) charset utf8 not null default '',
+    Imageid             int unsigned not null default 0,
+    target              ENUM('_blank','_self') not null default '_blank',
+    alt                 varchar(200) charset utf8 not null default 'None',
+    title               varchar(100) charset utf8 not null default 'None',
+    title_lang_en       varchar(100) charset utf8 not null default 'None',
+    primary key ({$name}id),
+    key (Categoryid)
+)ENGINE=InnoDB;
+%%
+pagination

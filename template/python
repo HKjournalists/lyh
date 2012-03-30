@@ -1,0 +1,148 @@
+accordioncategorymodel name
+#coding=utf-8
+from Category import Category
+
+class {$name}(Category):
+    table_name = '{$name}'
+    relative_model_name = ''
+    column_names = ['page','title','href','target']
+%%
+model name
+#coding=utf-8
+from Model import Model
+
+class {$name}(Model):
+    table_name = '{$name}'
+    column_names = []
+    
+    table_template = '''
+        CREATE TABLE {$table_name} (
+            {$table_name}id int unsigned not null auto_increment,
+            title varchar(100) charset utf8 not null default '',
+            primary key ({$table_name}id)
+        )ENGINE=InnoDB;
+        '''
+%%
+imglinkmodel name
+#coding=utf-8
+from ImgLink import ImgLink
+
+class {$name}(ImgLink):
+    table_name = '{$name}'
+    column_names = ['href','linkuri','alt','Imageid']
+%%
+itplinkmodel name
+#coding=utf-8
+from ImgLink import ImgLink
+
+class {$name}(ImgLink):
+    table_name = '{$name}'
+    column_names = ['href','target','linkuri','alt','Imageid','title','paragraph']
+%%
+textlinkmodel name
+#coding=utf-8
+from Model import Model
+
+class {$name}(Model):
+    table_name = '{$name}'
+    column_names = ['href','target','title','paragraph']
+%%
+categorymodel name
+#coding=utf-8
+from Category import Category
+
+class {$name}(Category):
+    table_name = '{$name}'
+    column_names = ['title']
+    relative_model_name = ''
+%%
+articlemodel name
+#coding=utf-8
+from Article import Article
+
+class {$name}(Article):
+    table_name = '{$name}'
+    category_table_name = '{$name}Category'
+%%
+fleafleamodel
+#coding=utf-8
+from ImgLink import ImgLink
+
+class Fleaflea(ImgLink):
+    table_name = 'Fleaflea'
+    column_names = ['fleaname','page', 'Categoryid', 'title', 'title_lang_en', 'href', 'target', 'hovertitle', 'hovertitle_lang_en', 'Imageid',]
+%%
+richarticlemodel name
+#coding=utf-8
+from Article import Article
+
+class {$name}(Article):
+    table_name = '{$name}'
+    category_table_name = '{$name}Category'
+%%
+accordionmodel name
+#coding=utf-8
+from Model import Model
+
+class {$name}(Model):
+    table_name = '{$name}'
+    category_table_name = '{$name}Category'
+    column_names = ['{$name}Categoryid','title','href','target']
+%%
+adminusermodel
+#coding=utf-8
+from Model import Model
+
+class AdminUser(Model):
+    table_name = 'AdminUser'
+    column_names = ['username', 'email', 'password', 'register_ip', 'login_ip', 'portait_url',]
+%%
+albummodel name
+#coding=utf-8
+from Album import Album
+
+class {$name}(Album):
+    table_name = '{$name}'
+    image_table_name = 'Image' #保存image数据的表,一个model负责两个表
+    column_names = ['href', 'target', 'title',]
+%%
+videomodel name
+#coding=utf-8
+from ImgLink import ImgLink
+
+class {$name}(ImgLink):
+    table_name = '{$name}'
+    column_names = ['Categoryid','href','target','title','alt','Imageid']
+%%
+test module_name
+#!coding=utf-8
+import unittest, test_helper, os, site_helper
+from site_helper import getDBHelper
+
+class Test{$module_name}(unittest.TestCase):
+
+    def setUp(self):
+        self.model = site_helper.getModel('{$module_name}')
+        test_helper.cleanTable(self.model.table_name)
+
+    def test_insert(self):
+        _model = self.model
+        data = test_helper.storage({})
+        new_id = _model.insert(data)
+        new_ = getDBHelper().fetchOne('select * from '+_model.table_name+' where '+_model.primary_key+'=%s',new_id)
+        self.assertEqual(,)
+%%
+controller name
+#coding=utf-8
+import site_helper, web, page_helper
+
+class {$name}:
+
+    def GET(self):
+        i = web.input()
+        model = site_helper.getModel('')
+
+        return site_helper.page_render.{$name}()
+
+    def POST(self):
+        pass

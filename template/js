@@ -1,0 +1,21 @@
+namespace name
+var namespace ="{$name}";
+if (!window[namespace]) window[namespace] = {};
+var {$name} = window[namespace];
+%%
+default
+$(function(){
+})
+%%
+ajax
+    var data = {};
+    $.ajax({
+        data:       data,
+        dataType:   'json',
+        type:       'POST',
+        url:        '',
+        success:    function(response_data){
+        },
+        error:      function(){
+        }
+    });

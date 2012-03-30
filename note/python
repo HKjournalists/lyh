@@ -98,3 +98,5 @@ json data: import json    json.dumps(data)
 截断中文字符, 取中文字符的子串 str.decode('utf-8')[0:100].encode('utf-8') 
 只显示小数点后一位 '%.1f' % 3.333 
 对url编码: from urllib import quote     url=quote(url)  
+解析取得url的参数  http://atomized.org/2008/06/parsing-url-query-parameters-in-python/  1 from urlparse import urlparse 2   url = urlparse('http://www.google.com/search?hl=en&safe=off&q=atomized&btnG=Search') 3   params = dict([part.split('=') for part in url[4].split('&')])
+时间日期运算 datetime.datetime.today() + datetime.timedelta(days=1) 

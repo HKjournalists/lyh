@@ -1,3 +1,4 @@
+aptitude install screen
 screen -S installsystem
 sudo su
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
@@ -11,10 +12,11 @@ aptitude update
 apt-get upgrade
 aptitude upgrade
 
-aptitude install gcc nginx mysql-client mysql-server
+aptitude install git gcc nginx mysql-client mysql-server
 aptitude install spawn-fcgi
 aptitude install python-webpy python-mysqldb 
 aptitude install php5 php5-fpm php5-mysql
+aptitude install sphinxsearch 
 
 # set beijing date
 cp /etc/localtime /etc/localtime.bak

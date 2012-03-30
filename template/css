@@ -1,0 +1,5 @@
+corner size
+    border-radius: {$size}px; -moz-border-radius: {$size}px; -webkit-border-radius: {$size}px; -o-border-radius: {$size}px;  -khtml-border-radius: {$size}px;
+%%
+boxshadow size color
+    box-shadow: 0px 0px {$size}px #{$color}; -moz-box-shadow: 0px 0px {$size}px #{$color}; -webkit-box-shadow: 0px 0px {$size}px #{$color}; -o-box-shadow: 0px 0px {$size}px #{$color}; -khtml-box-shadow: 0px 0px {$size}px #{$color};
