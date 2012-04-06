@@ -29,7 +29,7 @@ from ImgLink import ImgLink
 
 class {$name}(ImgLink):
     table_name = '{$name}'
-    column_names = ['href','linkuri','alt','Imageid']
+    column_names = ['title','paragraph','href','alt','Imageid','target']
 %%
 itplinkmodel name
 #coding=utf-8
