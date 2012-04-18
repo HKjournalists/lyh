@@ -60,3 +60,7 @@ sort用第列5排序 sort -g -k 5
 修改默认的编辑器:  export EDITOR=vim
 查看端口的程序 sudo netstat -natp | grep 9000(port) 
 查看内存占用排名 ps -aux|awk '{print "\t"}'|grep -v MEM|sort -r 
+给curl加上headers   http://liluo.org/2011/05/curl-%E7%AE%80%E5%8D%95%E4%BD%9C%E5%BC%8A%E6%9D%A1/ 
+修改密码:  sudo passwd user_name 
+把man转成pdf   man -t *** > temp    ps2pdf temp 
+使用mail发邮件 mail -s test -r info sdjllyh@gmail.com < exim4.conf 

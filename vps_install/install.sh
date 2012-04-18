@@ -1,6 +1,5 @@
 aptitude install screen
 screen -S installsystem
-sudo su
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 dpkg-reconfigure locales
 
