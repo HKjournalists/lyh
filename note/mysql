@@ -94,3 +94,5 @@ ip转为to int: inet_aton(ipstr)
 2003error 修改配置运行远程链接 http://www.cnblogs.com/xiazh/archive/2010/08/12/1797966.html
 MAC 下安装mysql server5.1  1 下载安装: http://www.mysql.com/downloads/mysql/5.1.html#downloads  2  mkdir -p /opt/local/var/db/mysql5/  3  sudo /opt/local/bin/mysqld_safe5 &  
 从一个表select数据再插入另一个表  Insert into b_fav(user_id,item_id,type,created) select user_id,pin_id,'pin',created from b_pin_fav; 
+设置修复8个小时的时差  SET time_zone = '+8:00' 
+查看缓存内存限制 mysql> show variables like '%query_cache%'; 

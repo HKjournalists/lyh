@@ -1,0 +1,1 @@
+长期连到服务器不掉线  -o "ServerAliveInterval 300"  

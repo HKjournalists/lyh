@@ -58,7 +58,7 @@ from . import string 从当前目录导入， from .. import string  从上一�
 assert <test>, <data>; 测试test，如果为false，则抛出data，可以用python -O 不运行assert
 陷阱:  [[]]*n  n个[]其实指向了同一个内存. 
 unixtime: int(time.mktime(time.localtime())) 
-键盘ctrl+c中断异常: except KeyboardInterrupt 
+键盘ctrl+c中断异常: except KeyboardInterrupt: exit(0)
 try else else中的语句只在没有异常发生时才执行 
 异常信息: sys.exc_info()[0] 
 用正则表达式来split  re.compile('\W*').split(text) 
@@ -100,3 +100,6 @@ json data: import json    json.dumps(data)
 对url编码: from urllib import quote     url=quote(url)  
 解析取得url的参数  http://atomized.org/2008/06/parsing-url-query-parameters-in-python/  1 from urlparse import urlparse 2   url = urlparse('http://www.google.com/search?hl=en&safe=off&q=atomized&btnG=Search') 3   params = dict([part.split('=') for part in url[4].split('&')])
 时间日期运算 datetime.datetime.today() + datetime.timedelta(days=1) 
+打印异常信息: import traceback   except: traceback.print_exc() 
+图片的尺寸, 返回width和height: import Image   Image.open(path).size 
+mac安装python-Imaging  easy_install pip       export ARCHFLAGS="-arch i386 -arch x86_64"    pip install pil     http://stackoverflow.com/questions/1438270/installing-python-imaging-library-pil-on-snow-leopard-with-updated-python-2-6 

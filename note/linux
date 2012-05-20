@@ -64,3 +64,9 @@ sort用第列5排序 sort -g -k 5
 修改密码:  sudo passwd user_name 
 把man转成pdf   man -t *** > temp    ps2pdf temp 
 使用mail发邮件 mail -s test -r info sdjllyh@gmail.com < exim4.conf 
+查看父进程PPID: ps -ef 
+修改linux 的文件最大链接符:  ulimit -SHn 65535 
+禁止ip地址访问, 拦截ip  iptables -A INPUT -i eth0 -p tcp -s 192.168.1.24 -j DROP 
+查看已经禁止的ip地址:  iptables -nL 
+清空拦截列表:  iptables -F INPUT 
+用表格的形式查看流量 dstat 

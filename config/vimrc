@@ -95,11 +95,11 @@ let html_no_rendering=1
 :map <C-t> :tabedit ./
 :map <C-e> \be
 :map <C-p> gf
-:map <C-c> :wq
 :map <C-h> gT
 :map <C-l> gt
 :map <C-a> "+p
 :map <C-s> "+y
+:map <C-c> :wq
 
 "pydiction 1.2 python auto complete
 runtime macros/matchit.vim
@@ -115,11 +115,13 @@ imap <u <ul></ul>O<li></li>
 " imap <f <frame ></frame>k$4F"a
 imap <f <form action="" method="POST" enctype="multipart/form-data" ></form>O
 imap <a <a href="" ></a>F<i
+imap <aa <a href="javascript:void(0);" onclick="$$(this).parents('form').submit(); return false;" ></a>F<i
 " imap <i <item ztype="" />F"i
 imap <i <input type="text" name="" value="" />F"i
 imap <img <img src="" alt="" title="" />5F"i
 imap <t <textarea cols=80 rows=10 name="" ></textarea>2F"a
 imap <p <p></p>F>a
+imap <l <label></label>F>a
 imap c= class=""i
 
 imap jokem joke_model = site_helper.getModel('Joke')

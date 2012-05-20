@@ -7,3 +7,4 @@
 移动分支指针到某个commit(move branch commit): git branch -f master commit 
 对某个分支打tag:  git tag -f tag_name branch 
 分享代码让group组有write写权限: git config --add core.sharedRepositoy group 
+查看某个文件的修改记录  git log -p filename 
