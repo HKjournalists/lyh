@@ -1,1 +1,2 @@
 只有在图片尺寸大于某个值时才压缩 convert 1.png -resize "300x150>" 2.png 
+去掉jpg图片的附加信息 find . -name "*.jpg" | gawk '{print "convert \"" $0 "\" +profile \"*\" \"" $0 "\""}'  | sh

@@ -1,0 +1,2 @@
+查看运行状态  telnet 127.0.0.1 11211      stats 
+各个状态值说明  http://www.fresh3g.org/blog/post/353/ 

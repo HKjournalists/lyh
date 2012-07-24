@@ -71,3 +71,4 @@ v模式下选择html中的一个tag  at
 打开光标下文件: gf 
 批量替换多个所有打开的文件:  :argdo %s/a_value/b_value/ge | update  
 输入特殊字符 :dig 
+递归查找打开文件  :args **/*app.py

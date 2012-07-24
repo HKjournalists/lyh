@@ -92,7 +92,7 @@ set shiftwidth=4
 set autowrite
 set nobackup
 let html_no_rendering=1
-:map <C-t> :tabedit ./
+:map <C-t> :w:CommandT 
 :map <C-e> \be
 :map <C-p> gf
 :map <C-h> gT
@@ -119,7 +119,7 @@ imap <aa <a href="javascript:void(0);" onclick="$$(this).parents('form').submit
 " imap <i <item ztype="" />F"i
 imap <i <input type="text" name="" value="" />F"i
 imap <img <img src="" alt="" title="" />5F"i
-imap <t <textarea cols=80 rows=10 name="" ></textarea>2F"a
+imap <t <textarea cols="80" rows="10" name="" ></textarea>2F"a
 imap <p <p></p>F>a
 imap <l <label></label>F>a
 imap c= class=""i
@@ -135,7 +135,9 @@ imap commentm comment_model = site_helper.getModel('Comment')
 :map \p /pythonfile:wgf
 :map \h /htmlfile:wgf
 :map \m /modelfile:wgf
-:map <F1> :wa
+:map <F1> :wa:!sudo /opt/lengxiaohua/tool/spawn-fcgi-me.sh restart 
+:map <F2> :wa:!sudo /opt/aoaola/tool/spawn-fcgi-me.sh restart 
+:map <F3> :wa:!sudo /opt/zark/tool/spawn-fcgi-me.sh restart 
 :map <F7> :wa:tabnew:r !/opt/aoaola/web/cgi/testing/test_all.py model:q!
 " :map <F8> :wa:tabnew:r !/opt/zark/web/cgi/testing/test_all.py zml:q!
 :map <F9> :wa:! /opt/aoaola/web/cgi/testing/test_one.py %

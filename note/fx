@@ -1,1 +1,3 @@
 ie6png和corner不能同时使用在同一个元素上, 也不能用在具有父子关系的两个元素上. 
+browsercenter可能会引起被居中的某个元素在ie下显示不出来 
+styleselect的下拉框在ie7下可能被遮住,需要利用baseZIndex参数, 并同时检查外层div的z-index 

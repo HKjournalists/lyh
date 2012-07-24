@@ -70,3 +70,7 @@ sort用第列5排序 sort -g -k 5
 查看已经禁止的ip地址:  iptables -nL 
 清空拦截列表:  iptables -F INPUT 
 用表格的形式查看流量 dstat 
+在终端下打开文件浏览工具  nautilus . 
+字体文件放在 ~/.fonts 下 
+在启动X之前的终端里面显示中文  aptitude install zhcon     zhcon --utf8
+xfce没有声音  xfce4-mixer  
