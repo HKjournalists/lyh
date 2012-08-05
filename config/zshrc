@@ -1,0 +1,48 @@
+alias commit='git commit -m'
+alias pull='git pull origin'
+alias push='git push origin'
+alias gs='git status'
+alias gc='git checkout'
+alias add='git add'
+alias addu='git add -u'
+alias log='git alog'
+alias clean='git clean -f -x'
+alias amend='git commit --amend'
+alias fetch='git fetch origin'
+alias merge='git merge'
+alias rebase='git rebase'
+alias update='git submodule update'
+alias pullm='git pull origin master'
+alias pushm='git push origin master'
+
+alias wang='ssh -o "ServerAliveInterval 300" devinwang@wang'
+alias ajie='ssh -o "ServerAliveInterval 300" ajie@ajie'
+alias liu='ssh -o "ServerAliveInterval 300" sdjl@liu'
+alias aoaola='ssh -o "ServerAliveInterval 300" sdjl@aoaola'
+alias lengxiaohua='ssh -o "ServerAliveInterval 300" sdjl@lengxiaohua'
+alias home='ssh -o "ServerAliveInterval 300" sdjl@home.sparker5.com'
+
+alias restart_nginx='sudo nginx -s stop && sudo nginx'
+alias ll='ls -l'
+alias la='ls -la'
+alias v='vim'
+alias ms='mysql -uroot --default-character-set=utf8'
+alias msdump='mysqldump -uroot --default-character-set=utf8'
+alias mszark='mysql -h zark_db -uzark_zark -p63bd07e401ff5fd846720b8564df597b5785e2f2 --database zark_zark --default-character-set=utf8'
+alias msaoaola='mysql -uroot --default-character-set=utf8 --database aoaola'
+alias mslengxiaohua='mysql -uroot --default-character-set=utf8 --database lengxiaohua'
+alias dumpaoaola='mysqldump -uroot --default-character-set=utf8  aoaola'
+alias dumplengxiaohua='mysqldump -uroot --default-character-set=utf8  lengxiaohua'
+
+
+export CLICOLOR='true'
+export LSCOLORS="exfxcxdxbxegedabagacad"
+
+##
+# Your previous /Users/sdjl/.profile file was backed up as /Users/sdjl/.profile.macports-saved_2012-08-01_at_11:51:26
+##
+
+# MacPorts Installer addition on 2012-08-01_at_11:51:26: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+

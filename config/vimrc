@@ -135,9 +135,9 @@ imap commentm comment_model = site_helper.getModel('Comment')
 :map \p /pythonfile:wgf
 :map \h /htmlfile:wgf
 :map \m /modelfile:wgf
-:map <F1> :wa:!sudo /opt/lengxiaohua/tool/spawn-fcgi-me.sh restart 
-:map <F2> :wa:!sudo /opt/aoaola/tool/spawn-fcgi-me.sh restart 
-:map <F3> :wa:!sudo /opt/zark/tool/spawn-fcgi-me.sh restart 
+:map <F1> :wa:!/opt/lengxiaohua/tool/spawn-fcgi-me.sh restart 
+:map <F2> :wa:!/opt/aoaola/tool/spawn-fcgi-me.sh restart 
+:map <F3> :wa:!/opt/zark/tool/spawn-fcgi-me.sh restart 
 :map <F7> :wa:tabnew:r !/opt/aoaola/web/cgi/testing/test_all.py model:q!
 " :map <F8> :wa:tabnew:r !/opt/zark/web/cgi/testing/test_all.py zml:q!
 :map <F9> :wa:! /opt/aoaola/web/cgi/testing/test_one.py %

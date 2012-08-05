@@ -1,2 +1,2 @@
-配置文件位置 /opt/local/etc/nginx 
+配置文件位置 /opt/local/etc/nginx  or  /usr/local/etc/nginx
 重启nginx: sudo nginx -s stop && nginx 
