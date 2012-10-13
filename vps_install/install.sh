@@ -13,9 +13,10 @@ aptitude upgrade
 
 aptitude install git gcc nginx mysql-client mysql-server
 aptitude install spawn-fcgi
-aptitude install python-webpy python-mysqldb 
+aptitude install python-webpy python-mysqldb python-setuptools python-imaging python-httplib2 python-memcache
+easy_install pip
 aptitude install php5 php5-fpm php5-mysql
-aptitude install sphinxsearch 
+aptitude install sphinxsearch imagemagick memcached
 
 # set beijing date
 cp /etc/localtime /etc/localtime.bak
