@@ -8,3 +8,5 @@
 对某个分支打tag:  git tag -f tag_name branch 
 分享代码让group组有write写权限: git config --add core.sharedRepositoy group 
 查看某个文件的修改记录  git log -p filename 
+删除一个submodule子项目 1 删除.gitmodules和.git/config相关内容  2 git rm --cached   3 rm -r  
+忽略文件的mode权限  git config  core.filemode false 

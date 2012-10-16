@@ -103,3 +103,4 @@ json data: import json    json.dumps(data)
 打印异常信息: import traceback   except: traceback.print_exc() 
 图片的尺寸, 返回width和height: import Image   Image.open(path).size 
 mac安装python-Imaging  easy_install pip       export ARCHFLAGS="-arch i386 -arch x86_64"    pip install pil     http://stackoverflow.com/questions/1438270/installing-python-imaging-library-pil-on-snow-leopard-with-updated-python-2-6 
+MySQLdb 文档 help http://mysql-python.sourceforge.net/MySQLdb-1.2.2/ 

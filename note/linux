@@ -75,3 +75,7 @@ sort用第列5排序 sort -g -k 5
 在启动X之前的终端里面显示中文  aptitude install zhcon     zhcon --utf8
 xfce没有声音  xfce4-mixer  
 更新服务器时间 ntpdate 210.72.145.44 
+虚拟机突然打不开  sudo chmod -R o-w /usr   sudo chmod 755 /Applications 
+登陆mac的ssh有乱码   LANG=zh_CN.UTF-8    export LANG 
+禁止root用户登录 sudo vim /etc/ssh/sshd_config   PermitRootLogin=no   sudo /etc/rc.d/sshd restart 
+设置服务器时间 apt-get install ntpdate     ntpdate 210.72.145.44 
