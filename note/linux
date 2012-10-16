@@ -76,4 +76,5 @@ sort用第列5排序 sort -g -k 5
 xfce没有声音  xfce4-mixer  
 虚拟机突然打不开  sudo chmod -R o-w /usr   sudo chmod 755 /Applications 
 登陆mac的ssh有乱码   LANG=zh_CN.UTF-8    export LANG 
-sudo vim /etc/ssh/sshd_config   PermitRootLogin=no   sudo /etc/rc.d/sshd restart 
+禁止root用户登录 sudo vim /etc/ssh/sshd_config   PermitRootLogin=no   sudo /etc/rc.d/sshd restart 
+设置服务器时间 apt-get install ntpdate     ntpdate 210.72.145.44 
