@@ -74,3 +74,4 @@ sort用第列5排序 sort -g -k 5
 字体文件放在 ~/.fonts 下 
 在启动X之前的终端里面显示中文  aptitude install zhcon     zhcon --utf8
 xfce没有声音  xfce4-mixer  
+更新服务器时间 ntpdate 210.72.145.44 
