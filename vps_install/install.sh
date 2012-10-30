@@ -6,6 +6,7 @@ screen -S installsystem
 
 
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
+aptitude install locales
 dpkg-reconfigure locales
 
 echo "" > /etc/apt/sources.list
@@ -21,7 +22,8 @@ aptitude install python-webpy python-mysqldb python-setuptools python-imaging py
 easy_install pip
 aptitude install php5 php5-fpm php5-mysql
 aptitude install sphinxsearch imagemagick memcached heirloom-mailx exim4
-aptitude install curl vnstat vim zsh
+aptitude install curl vnstat vim zsh unzip dstat telnet
+aptitude install vim-gnome vim-gui-common vim-full
 
 # set beijing date
 cp /etc/localtime /etc/localtime.bak

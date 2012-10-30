@@ -104,3 +104,5 @@ json data: import json    json.dumps(data)
 图片的尺寸, 返回width和height: import Image   Image.open(path).size 
 mac安装python-Imaging  easy_install pip       export ARCHFLAGS="-arch i386 -arch x86_64"    pip install pil     http://stackoverflow.com/questions/1438270/installing-python-imaging-library-pil-on-snow-leopard-with-updated-python-2-6 
 MySQLdb 文档 help http://mysql-python.sourceforge.net/MySQLdb-1.2.2/ 
+re正则表达式sub替换时出现UnicodeEncodeError或者UnicodeDecodeError   请先把content转为unicode 
+dir(datetime) 'astimezone', 'combine', 'ctime', 'date', 'day', 'dst', 'fromordinal', 'fromtimestamp', 'hour', 'isocalendar', 'isoformat', 'isoweekday', 'max', 'microsecond', 'min', 'minute', 'month', 'now', 'replace', 'resolution', 'second', 'strftime', 'strptime', 'time', 'timetuple', 'timetz', 'today', 'toordinal', 'tzinfo', 'tzname', 'utcfromtimestamp', 'utcnow', 'utcoffset', 'utctimetuple', 'weekday', 'year'

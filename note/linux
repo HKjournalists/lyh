@@ -78,3 +78,5 @@ xfce没有声音  xfce4-mixer
 登陆mac的ssh有乱码   LANG=zh_CN.UTF-8    export LANG 
 禁止root用户登录 sudo vim /etc/ssh/sshd_config   PermitRootLogin=no   sudo /etc/rc.d/sshd restart 
 设置服务器时间 apt-get install ntpdate     ntpdate 210.72.145.44 
+修改文件连接符数量的环境变量  ulimit -SHn 65535 
+查看连接状态 netstat -nat  
