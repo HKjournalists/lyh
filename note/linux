@@ -81,3 +81,9 @@ xfce没有声音  xfce4-mixer
 设置服务器时间 apt-get install ntpdate     ntpdate 210.72.145.44 
 修改文件连接符数量的环境变量  ulimit -SHn 65535 
 查看连接状态 netstat -nat  
+iftop help http://www.vpser.net/manage/iftop.html 
+修改virtualbox的虚拟文件大小  VBoxManage modifyhd debian.vdi --resize <MB> 
+让diff的输出结果想git diff一样: diff -urN 
+查看实时网络带宽流量工具 iftop 
+lsof 参考 http://my.oschina.net/aiguozhe/blog/39369  http://blog.csdn.net/guoguo1980/article/details/2324454
+设置virtualbox共享文件夹  1 在virtualbox菜单中选择 Install Guest Additions  2  cd /cdrom and run ./VBoxLinuxAdditions.run   3 如果有bug可能需要 apt-get install build-essential linux-headers-11.4.2   或者参见 http://virtualboxes.org/doc/installing-guest-additions-on-debian/

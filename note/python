@@ -106,3 +106,5 @@ mac安装python-Imaging  easy_install pip       export ARCHFLAGS="-arch i386 -ar
 MySQLdb 文档 help http://mysql-python.sourceforge.net/MySQLdb-1.2.2/ 
 re正则表达式sub替换时出现UnicodeEncodeError或者UnicodeDecodeError   请先把content转为unicode 
 dir(datetime) 'astimezone', 'combine', 'ctime', 'date', 'day', 'dst', 'fromordinal', 'fromtimestamp', 'hour', 'isocalendar', 'isoformat', 'isoweekday', 'max', 'microsecond', 'min', 'minute', 'month', 'now', 'replace', 'resolution', 'second', 'strftime', 'strptime', 'time', 'timetuple', 'timetz', 'today', 'toordinal', 'tzinfo', 'tzname', 'utcfromtimestamp', 'utcnow', 'utcoffset', 'utctimetuple', 'weekday', 'year'
+根据二进制数据判断图片类型 imghdr.what(None, inputs['Filedata']) 
+获得当前运行程序的目录 os.getcwd() 
