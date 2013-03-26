@@ -87,3 +87,4 @@ iftop help http://www.vpser.net/manage/iftop.html
 查看实时网络带宽流量工具 iftop 
 lsof 参考 http://my.oschina.net/aiguozhe/blog/39369  http://blog.csdn.net/guoguo1980/article/details/2324454
 设置virtualbox共享文件夹  1 在virtualbox菜单中选择 Install Guest Additions  2  cd /cdrom and run ./VBoxLinuxAdditions.run   3 如果有bug可能需要 apt-get install build-essential linux-headers-11.4.2   或者参见 http://virtualboxes.org/doc/installing-guest-additions-on-debian/
+批量下载网站所有页面 wget -r -p -np -k http://*** 

@@ -10,8 +10,9 @@ aptitude install locales
 dpkg-reconfigure locales
 
 echo "" > /etc/apt/sources.list
-echo "deb http://http.us.debian.org/debian/ testing main non-free contrib" >> /etc/apt/sources.list
-echo "deb-src http://http.us.debian.org/debian/ testing main non-free contrib" >> /etc/apt/sources.list
+echo "deb http://debian.ustc.edu.cn/debian/ testing main non-free contrib" >> /etc/apt/sources.list
+echo "deb-src http://debian.ustc.edu.cn/debian/ testing main non-free contrib" >> /etc/apt/sources.list
+echo "deb http://debian.ustc.edu.cn/debian/ sid main non-free contrib" >> /etc/apt/sources.list
 apt-get update
 aptitude update
 apt-get upgrade

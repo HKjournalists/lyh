@@ -108,3 +108,5 @@ re正则表达式sub替换时出现UnicodeEncodeError或者UnicodeDecodeError   
 dir(datetime) 'astimezone', 'combine', 'ctime', 'date', 'day', 'dst', 'fromordinal', 'fromtimestamp', 'hour', 'isocalendar', 'isoformat', 'isoweekday', 'max', 'microsecond', 'min', 'minute', 'month', 'now', 'replace', 'resolution', 'second', 'strftime', 'strptime', 'time', 'timetuple', 'timetz', 'today', 'toordinal', 'tzinfo', 'tzname', 'utcfromtimestamp', 'utcnow', 'utcoffset', 'utctimetuple', 'weekday', 'year'
 根据二进制数据判断图片类型 imghdr.what(None, inputs['Filedata']) 
 获得当前运行程序的目录 os.getcwd() 
+测试框架 http://webtest.pythonpaste.org/en/latest/webtest.html#testapp   以及  paste.fixture 
+获得文件路径(可能返回软连接地址)  os.path.dirname(os.path.abspath(__file__)) 
