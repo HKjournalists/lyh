@@ -1,2 +1,3 @@
 删除css .removeClass('classname') 
 checkbox 打勾和去勾 attr('checked','checked')  removeAttr('checked') 
+判断ie版本: $.browser.msie && $.browser.version === 6  

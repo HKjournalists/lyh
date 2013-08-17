@@ -88,3 +88,14 @@ iftop help http://www.vpser.net/manage/iftop.html
 lsof 参考 http://my.oschina.net/aiguozhe/blog/39369  http://blog.csdn.net/guoguo1980/article/details/2324454
 设置virtualbox共享文件夹  1 在virtualbox菜单中选择 Install Guest Additions  2  cd /cdrom and run ./VBoxLinuxAdditions.run   3 如果有bug可能需要 apt-get install build-essential linux-headers-11.4.2   或者参见 http://virtualboxes.org/doc/installing-guest-additions-on-debian/
 批量下载网站所有页面 wget -r -p -np -k http://*** 
+转换视频格式  ffmpeg -i a.avi -vcodec copy -acodec copy a.mp4 
+ffmpeg 参考 http://blog.csdn.net/liangkaiming/article/details/5798898 
+ffmpeg wma 转 mp3: ffmpeg -i “in.wma” -acodec libmp3lame -ab 160k -ac 2 -ar 44100 “out.mp3″ 
+m3u8 http://m3u8-segmenter.inodes.org/ 
+生成m3u8？  http://www.cnblogs.com/mystory/archive/2013/04/07/3006200.html  
+删除超大文件夹 rsync --delete-before -a -H -v  --progress --stats /tmp/empty  target  
+统计一段时间内各个进程的io使用   http://www.xaprb.com/blog/2009/08/23/how-to-find-per-process-io-statistics-on-linux/ 
+分析nginx日志, 使用goaccess 
+查看某个进程打开的文件列表 lsof -p PID 
+使用convert限制文件的大小: 
+find查找多个结果or关系, find . -name a -o -name b 

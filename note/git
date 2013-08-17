@@ -10,3 +10,6 @@
 查看某个文件的修改记录  git log -p filename 
 删除一个submodule子项目 1 删除.gitmodules和.git/config相关内容  2 git rm --cached   3 rm -r  
 忽略文件的mode权限  git config  core.filemode false 
+配置友好的log  git config --global alias.alog "log --all --decorate --graph --color" 
+删除多个deleted文件 git status | sed -n '/^# *deleted:/s///p' | xargs git rm 
+彻底删除子项目submodule:  1  rm -r 子项目文件夹   2  删除.gitmodule的内容   3 删除.git/config中submodule的配置   4  删除  .git/modules   

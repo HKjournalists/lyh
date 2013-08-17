@@ -1,1 +1,2 @@
 安装flash:  sudo aptitude  install flashplugin-nonfree 
+找不到add-apt-repository?   sudo aptitude install python-software-properties 
