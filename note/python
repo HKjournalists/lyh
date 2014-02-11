@@ -110,3 +110,7 @@ dir(datetime) 'astimezone', 'combine', 'ctime', 'date', 'day', 'dst', 'fromordin
 获得当前运行程序的目录 os.getcwd() 
 测试框架 http://webtest.pythonpaste.org/en/latest/webtest.html#testapp   以及  paste.fixture 
 获得文件路径(可能返回软连接地址)  os.path.dirname(os.path.abspath(__file__)) 
+生成自定义格式的时间字符串: created.strftime('%Y%m%d%H%M%S') 
+搭建临时服务器: Python 2.x: python -m SimpleHTTPserver 8080   Python 3.x: python -m http.server 8080   根目录为当前目录 
+判断文件类型: chardet库 
+用字符串创建时间 datetime.datetime.strptime('2013-11-12 00:00', '%Y-%m-%d %H:%M') 

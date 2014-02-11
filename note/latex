@@ -1,0 +1,1 @@
+enumerate中使用中文序号 \renewcommand{\labelenumi}{第\CJKnumber{\value{enumi}}章：} 

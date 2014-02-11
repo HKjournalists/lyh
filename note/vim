@@ -73,3 +73,4 @@ v模式下选择html中的一个tag  at
 输入特殊字符 :dig 
 递归查找打开文件  :args **/*app.py
 在命令中获得正在编辑的文件名  %    %:t    %:p   %:p:h  
+查看配色方案 /usr/share/vim/vim73/colors 

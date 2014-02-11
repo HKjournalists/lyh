@@ -15,3 +15,4 @@
 alt+tab的替代品: super+tab 
 运行终端: ctrl+alt+t 
 sudo apt-get install poppler-data 
+安装鼠标右键弹出运行脚本的程序 sudo aptitude install nautilus-script-manager  然后把可执行文件复制到 ~/.gnome2/nautilus-scripts 

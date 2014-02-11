@@ -99,3 +99,4 @@ MAC 下安装mysql server5.1  1 下载安装: http://www.mysql.com/downloads/mys
 出现MySQL server has gone away连接超时， 在配置中添加wait_timeout=2880000 （默认是28800=8小时） 
 Too many connections错误，  在配置中添加 set-variable = max_connections=500, 或者命令 set global max_connections=500 
 获得本周\每周的第一天(星期日): DATE_ADD(DATE(created), INTERVAL(-DAYOFWEEK(created)) DAY) 
+把枚举enum 转为整数： elt(money, 5, 10, 20, 50, 100, 200, 300, 500) 
