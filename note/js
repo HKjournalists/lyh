@@ -10,3 +10,4 @@ replace : string.replace(regexp/substr,newstring)
 获得url的相对路径 window.location.pathname 
 把UTF-8的url编码为字母的 encodeURI(uri)  参考: http://blog.csdn.net/lne818/article/details/2172432
 得到tag的名称  .attr('nodeName') 
+设置textarea的光标在最后面  .val('').val('show text'); 

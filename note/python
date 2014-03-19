@@ -114,3 +114,4 @@ dir(datetime) 'astimezone', 'combine', 'ctime', 'date', 'day', 'dst', 'fromordin
 搭建临时服务器: Python 2.x: python -m SimpleHTTPserver 8080   Python 3.x: python -m http.server 8080   根目录为当前目录 
 判断文件类型: chardet库 
 用字符串创建时间 datetime.datetime.strptime('2013-11-12 00:00', '%Y-%m-%d %H:%M') 
+排序 products = sorted(products, key=lambda x: x['rank'], reverse=True) 

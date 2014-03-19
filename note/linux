@@ -104,3 +104,4 @@ find查找多个结果or关系, find . -name a -o -name b
 拼图 montage 1.jpg 2.jpg 3.jpg 4.jpg -tile 2x2 -geometry +2+2 -background #FFFFFF out.png 
 date设置时间 date -s 2007-04-14 13:58:00  
 设置系统时区 cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
+提取pdf中的部分页面 pdfjam -o out.pdf -- main.pdf '3-120' 
